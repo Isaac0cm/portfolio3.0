@@ -6,24 +6,20 @@ import Home from './Home.js';
 import About from './About';
 import Contact from './Contact';
 import Projects from './Projects';
-import Cv from './Cv';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-          <nav className='navbar'>
-            <Nav />
-          </nav>
+    <>
+      <Router>
+        <Nav />
         <Routes>
-          <Route path='/' exact component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/history' component={Cv} />
+          <Route path='/' exact element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/projects' element={<Projects />} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </>
   );
 }
 
